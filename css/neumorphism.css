@@ -1,0 +1,89 @@
+:root {
+  --neu-background: #e0e5ec;
+  --neu-light-shadow: #ffffff;
+  --neu-dark-shadow: #a3b1c6;
+  --neu-distance: 0.25rem;
+  --neu-blur: 0.5rem;
+  --neu-inner-distance: 0.15rem;
+}
+
+.neu-element {
+  background: var(--neu-background);
+  border-radius: 10px;
+  box-shadow: var(--neu-distance) var(--neu-distance) var(--neu-blur)
+      var(--neu-dark-shadow),
+    calc(var(--neu-distance) * -1) calc(var(--neu-distance) * -1)
+      var(--neu-blur) var(--neu-light-shadow);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.neu-pressed {
+  background: var(--neu-background);
+  box-shadow: inset var(--neu-inner-distance) var(--neu-inner-distance)
+      var(--neu-blur) var(--neu-dark-shadow),
+    inset calc(var(--neu-inner-distance) * -1)
+      calc(var(--neu-inner-distance) * -1) var(--neu-blur)
+      var(--neu-light-shadow);
+}
+
+/* Interactive Elements */
+button.neu-element {
+  cursor: pointer;
+  padding: 8px 16px;
+}
+
+button.neu-element:hover {
+  transform: translateY(-1px);
+}
+
+button.neu-element:active {
+  transform: translateY(1px);
+  box-shadow: inset var(--neu-inner-distance) var(--neu-inner-distance)
+      var(--neu-blur) var(--neu-dark-shadow),
+    inset calc(var(--neu-inner-distance) * -1)
+      calc(var(--neu-inner-distance) * -1) var(--neu-blur)
+      var(--neu-light-shadow);
+}
+
+input.neu-element {
+  padding: 8px 16px;
+  width: 100%;
+  outline: none;
+  box-shadow: inset var(--neu-inner-distance) var(--neu-inner-distance)
+      var(--neu-blur) var(--neu-dark-shadow),
+    inset calc(var(--neu-inner-distance) * -1)
+      calc(var(--neu-inner-distance) * -1) var(--neu-blur)
+      var(--neu-light-shadow);
+}
+
+/* Convex Effect */
+.neu-convex {
+  background: var(--neu-background);
+  border-radius: var(--neu-radius);
+  box-shadow: 8px 8px 16px var(--neu-dark-shadow),
+    -8px -8px 16px var(--neu-light-shadow);
+}
+
+/* Concave Effect */
+.neu-concave {
+  background: var(--neu-background);
+  border-radius: var(--neu-radius);
+  box-shadow: inset 8px 8px 16px var(--neu-dark-shadow),
+    inset -8px -8px 16px var(--neu-light-shadow);
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  /* Mobile-specific styles */
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  /* Tablet-specific styles */
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  /* Desktop-specific styles */
+}
