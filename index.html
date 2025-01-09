@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Social Network</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/neumorphism.css" />
+    <link rel="stylesheet" href="css/feed.css" />
+    <link rel="stylesheet" href="css/messaging.css" />
+    <link rel="stylesheet" href="css/friends.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="neu-navbar">
+      <ul>
+        <li><a href="#" data-page="feed" class="active">Feed</a></li>
+        <li><a href="#" data-page="messaging">Messages</a></li>
+        <li><a href="#" data-page="friends">Friends</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Feed Page -->
+      <div id="feed-page" class="page active">
+        <div id="posts-container" class="posts-container"></div>
+      </div>
+
+      <!-- Messaging Page -->
+      <div id="messaging-page" class="page">
+        <div class="messaging-container">
+          <div class="conversations-list neu-element"></div>
+          <div class="conversation-details neu-element">
+            <div id="messages-container"></div>
+            <div class="message-input-container">
+              <input
+                type="text"
+                id="message-input"
+                class="neu-element"
+                placeholder="Type a message..."
+              />
+              <button id="send-message" class="neu-element">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Friends Page -->
+      <div id="friends-page" class="page">
+        <div class="friends-container">
+          <div class="search-container neu-element">
+            <input
+              type="text"
+              id="friends-search"
+              placeholder="Search friends..."
+            />
+          </div>
+          <ul id="friends-list" class="friends-list"></ul>
+        </div>
+      </div>
+    </main>
+
+    <!-- Modal for fullscreen images -->
+    <div id="image-modal" class="modal">
+      <span class="close-modal">&times;</span>
+      <img class="modal-content" id="modal-img" />
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/data/posts.js"></script>
+    <script src="js/data/messages.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/feed.js"></script>
+    <script src="js/messaging.js"></script>
+    <script src="js/friends.js"></script>
+  </body>
+</html>
